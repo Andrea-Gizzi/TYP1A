@@ -6,7 +6,7 @@ Elaborato 1: XS
 
 # TYP1A
 Autore: Gizzi Andrea  
-[Typia]((https://andrea-gizzi.github.io/TYP1A/))
+[Typia](https://andrea-gizzi.github.io/TYP1A/)
 
 SCIVERLO SENZA SPIEGARE CHE HO FATT UNA RICERCA ECC. DEVO ESSERE PIU OGGETTIVO SUL PROTOTIPO
 ## Introduzione e tema
