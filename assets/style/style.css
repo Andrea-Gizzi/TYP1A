@@ -33,6 +33,7 @@ header {
 }
 
 #input_container {
+    font-family: Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,6 +47,7 @@ header {
 }
 
 #input_utente {
+    font-family: Helvetica, sans-serif;
     background-color: transparent;
     font-size: 14px;
     color: white;
@@ -83,6 +85,7 @@ header {
 }
 
 #buttons .b1 {
+    font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: 1px solid white;
     background-color: #ffffff00;
@@ -107,6 +110,7 @@ header {
 }
 
 #buttons .b2{
+    font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: none;
     background-color: #5064ff;

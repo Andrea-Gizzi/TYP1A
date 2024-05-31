@@ -85,6 +85,7 @@ header {
 }
 
 #buttons .b1 {
+    font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: 1px solid white;
     background-color: #ffffff00;
@@ -109,6 +110,7 @@ header {
 }
 
 #buttons .b2{
+        font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: none;
     background-color: #5064ff;
