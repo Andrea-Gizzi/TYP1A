@@ -2,7 +2,8 @@ let categoria = 'categoria';
 let caratteri = "abcdefghijklmnopqrstuvwxyz0123456789";
 let lettera = caratteri.charAt(Math.floor(Math.random() * caratteri.length));
 let uppercase = false;
-
+let prevLettera = lettera;  // Variabile per memorizzare la lettera precedente
+let prevUppercase = uppercase;  // Variabile per memorizzare lo stato uppercase precedente
 
 function changeFilter(newFilter) {
     categoria = newFilter;
@@ -21,7 +22,6 @@ function changeFilter(newFilter) {
     document.getElementById(newFilter + 'Button').classList.add('active');
 }
 
-
 async function run() {
     let data;
 
@@ -31,9 +31,9 @@ async function run() {
             data = json;
         });
 
-    mio_container = document.getElementById('test');
+    let mio_container = document.getElementById('test');
 
-    //SORT
+    // SORT
     if (categoria === 'categoria') {
         data.sort(function(elementoA, elementoB) {
             if (elementoA.sottocategoria < elementoB.sottocategoria) return -1;
@@ -51,14 +51,14 @@ async function run() {
     } 
 
     if (categoria === 'periodo') {
-        data.sort(function(elementoA, elementoB) {
+        data.sort((elementoA, elementoB) => {
             if (elementoA.data < elementoB.data) return -1;
             if (elementoA.data > elementoB.data) return 1;
             return 0;
         });
     } 
 
-    //CATEGORIE
+    // CATEGORIE
     let categorie = [];
     for (let i = 0; i < data.length; i++) {
         if (!categorie.includes(data[i][categoria])) {
@@ -80,24 +80,27 @@ async function run() {
     }
 
     document.querySelector('main').innerHTML = cats;
-    mio_input = document.getElementById("input_utente");
+    let mio_input = document.getElementById("input_utente");
     mio_input.addEventListener("input", getLetter);
 
     mio_input.addEventListener("keyup", function() {
         let inputValue = mio_input.value.trim();
-        if (inputValue === '' || inputValue === 'error') {
-            return;
-        }
-
-        if (inputValue === inputValue.toUpperCase()) {
-            uppercase = true;
-            render_letter(lettera, uppercase);
+        if (inputValue === '' || inputValue === 'undefined') {
+            lettera = prevLettera;  // Ripristina la lettera precedente se l'input è vuoto
+            uppercase = prevUppercase;  // Ripristina lo stato uppercase precedente
+        } else if (caratteri.includes(inputValue.toLowerCase())) {
+            lettera = inputValue.toLowerCase();
+            uppercase = (inputValue === inputValue.toUpperCase());
+            prevLettera = lettera;  // Aggiorna la lettera precedente
+            prevUppercase = uppercase;  // Aggiorna lo stato uppercase precedente
         } else {
-            uppercase = false;
-            render_letter(lettera, uppercase);
+            lettera = prevLettera;  // Mantiene la lettera precedente per caratteri non validi
+            uppercase = prevUppercase;  // Mantiene lo stato uppercase precedente
         }
 
-        let up_case = document.getElementById('up'); // Aggiorna la referenza
+        render_letter(lettera, uppercase);
+
+        let up_case = document.getElementById('up');
         if (uppercase) {
             up_case.classList.remove('uppercase-inactive');
             up_case.classList.add('uppercase-active');
@@ -114,33 +117,41 @@ async function run() {
     function getLetter() {
         let input_value = document.getElementById("input_utente").value.trim();
         if (input_value === '') {
-            return;
+            lettera = prevLettera;  // Ripristina la lettera precedente se l'input è vuoto
+            uppercase = prevUppercase;  // Ripristina lo stato uppercase precedente
+        } else if (caratteri.includes(input_value.toLowerCase())) {
+            lettera = input_value.toLowerCase();
+            prevLettera = lettera;  // Aggiorna la lettera precedente
+            prevUppercase = uppercase;  // Aggiorna lo stato uppercase precedente
+        } else {
+            lettera = prevLettera;  // Mantiene la lettera precedente per caratteri non validi
+            uppercase = prevUppercase;  // Mantiene lo stato uppercase precedente
         }
-        lettera = input_value;
         console.log(lettera);
 
-        if (caratteri.indexOf(lettera) > 1) {
-            console.log(lettera);
-            render_letter(lettera); // uppercase
-        }
+        render_letter(lettera, uppercase);
     }
 
-
     let up_case = document.getElementById('up');
-    up_case.addEventListener("click", function(){
-        if (uppercase == false || uppercase == undefined){
-            uppercase = true;
-        } else {
-            uppercase = false;
-        }
-        if (lettera == ''){
-            lettera =  caratteri.charAt(Math.floor(Math.random() * caratteri.length));
+    up_case.addEventListener("click", function() {
+        uppercase = !uppercase;
+        prevUppercase = uppercase;  // Aggiorna lo stato uppercase precedente
+
+        if (lettera === '' || lettera === 'undefined') {
+            lettera = caratteri.charAt(Math.floor(Math.random() * caratteri.length));
         }
         render_letter(lettera, uppercase);
-        console.log(lettera, uppercase);
+
+        if (uppercase) {
+            up_case.classList.remove('uppercase-inactive');
+            up_case.classList.add('uppercase-active');
+            up_case.innerHTML = '<i class="bi bi-shift-fill"></i>';
+        } else {
+            up_case.classList.remove('uppercase-active');
+            up_case.classList.add('uppercase-inactive');
+            up_case.innerHTML = '<i class="bi bi-shift"></i>';
+        }
     });
-
-
 
     function render_letter(lettera, uppercase) {
         let categorie = document.getElementsByClassName('categoria');
@@ -155,15 +166,12 @@ async function run() {
             let output = "";
             let case_ = '';
             
-            if (isNaN(lettera) == true) {
-                if (uppercase == false || uppercase == undefined) {
-                    case_ = '';
-                } else {
-                    case_ = '_upper';
-                }
+            if (isNaN(lettera)) {
+                case_ = uppercase ? '_upper' : '';
             }
-            nome_font = data[i].font;
-            nome_file =  lettera + case_  + '.png';
+
+            let nome_font = data[i].font;
+            let nome_file = lettera + case_ + '.png';
             output += "<div class='info'>";
             output += '<img src=./assets/imgs/' + nome_font + '/' + nome_file + '>';
             output += "<div class='metadata'>";
@@ -178,17 +186,17 @@ async function run() {
             output += '</div>';
             container.innerHTML += output;
         }
-        
+
+        console.log(uppercase);
     }
 }
-
 
 //CATEGORIA STANDARD PAGINA
 window.onload = function() {
     document.getElementById('categoriaButton').classList.add('active');
     changeFilter('categoria');
     
-    let up_case = document.getElementById('up'); // Aggiorna la referenza
+    let up_case = document.getElementById('up');
     up_case.classList.add('uppercase-inactive');
     up_case.innerHTML = '<i class="bi bi-shift"></i>';
 };
