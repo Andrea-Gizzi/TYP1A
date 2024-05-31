@@ -13,7 +13,7 @@ body{
 
 
 /* HEADER */
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,25 +27,64 @@ header{
     background-color: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
-    z-index: 1000; /* ho mandato in primo piano l'header*/
+    z-index: 1000;
 }
 
 .header-text{
-    flex: 1;
     font-size: 18px;
 }
 
-#buttons {
-    font-size: 14px;
+#input_container {
     display: flex;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#input {
+    display: flex;
+    align-items: center;
+}
+
+#input_utente {
+    background-color: transparent;
+    font-size: 14px;
+    color: white;
+    border: 1px solid #5064ff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+#up {
+    margin-left: 10px;
+    border: 1px solid  #5064ff;
+    background-color: #ffffff00;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 18px;
+    display: inline-block;    
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#up.uppercase-active {
+    background-color:  #5064ff;
     color: white;
 }
 
-#buttons button {
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#buttons .b1 {
     margin-left: 10px;
     border: 1px solid white;
     background-color: #ffffff00;
@@ -60,14 +99,71 @@ header{
     cursor: pointer;
 }
 
-#buttons button:hover{
-    background-color: rgba(255, 255, 255, 0.400);;
- }
+#buttons .b1:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
-#buttons button.active {
-     color: black;
+#buttons .b1.active {
+    color: black;
     background-color: white;
 }
+
+#buttons .b2{
+    margin-left: 10px;
+    border: none;
+    background-color: #5064ff;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;    
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#buttons .b2:hover {
+    background-color: #142fff;
+}
+
+
+/* METADATI */
+.font {
+    font-weight: bold; 
+    font-size: 14px; 
+    margin-bottom: 8px;
+}
+
+.categoria {
+    font-size: 12px;
+}
+
+.sottocategoria { 
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.autore { 
+    font-size: 12px;
+}
+
+.anno { 
+    font-size: 12px;
+}
+
+.luogo { 
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.utilizzo {
+    color: gray;
+    font-size: 12px;
+}
+
+
 
 
 /*MAIN*/
@@ -85,10 +181,6 @@ main div {
     padding-bottom: 14px;
     padding-left: 10px;
 }
-
-/* .riga div{
-    
-} */
 
 .riga{
     border-top: 1px solid rgb(50, 50, 50);

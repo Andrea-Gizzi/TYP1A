@@ -58,17 +58,17 @@ async function run() {
     let output = "";
     for (let i = 0; i < data.length; i++) {
 
-        output += "<div class='riga'>"
+        output += "<div class='riga'>";
 
-        output += "<div>" + data[i].font + "</div>"
-        output += "<div>" + data[i].categoria + "</div>"
-        output += "<div>" + data[i].sottocategoria + "</div>"
-        output += "<div>" + data[i].autore + "</div>"
-        output += "<div>" + data[i].data + "</div>"
-        output += "<div>" + data[i].luogo + "</div>"
-        output += "<div>" + data[i].utilizzo + "</div>"
-
-        output += "</div>"
+        output += "<div class='font'>" + data[i].font + "</div>";
+        output += "<div class='categoria'>" + data[i].categoria + "</div>";
+        output += "<div class='sottocategoria'>" + data[i].sottocategoria + "</div>";
+        output += "<div class='autore'>" + data[i].autore + "</div>";
+        output += "<div class='anno'>" + data[i].data + "</div>";
+        output += "<div class='luogo'>" + data[i].luogo + "</div>";
+        output += "<div class='utilizzo'>" + data[i].utilizzo + "</div>";
+        
+        output += "</div>";
         }
 
         document.querySelector('main').innerHTML = output;
