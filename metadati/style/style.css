@@ -1,0 +1,132 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-family: monospace;
+}
+
+
+/* HEADER */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    background-color: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    z-index: 1000; /* ho mandato in primo piano l'header*/
+}
+
+.header-text{
+    flex: 1;
+    font-size: 18px;
+}
+
+#buttons {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    color: white;
+}
+
+#buttons button {
+    margin-left: 10px;
+    border: 1px solid white;
+    background-color: #ffffff00;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;    
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#buttons button:hover{
+    background-color: rgba(255, 255, 255, 0.400);;
+ }
+
+#buttons button.active {
+     color: black;
+    background-color: white;
+}
+
+
+/*MAIN*/
+main {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+main div {
+    padding-top: 6px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+}
+
+/* .riga div{
+    
+} */
+
+.riga{
+    border-top: 1px solid rgb(50, 50, 50);
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1.4fr 0.2fr 0.4fr 1fr;
+    column-gap: 1em;
+}
+
+.riga:hover{
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.200);
+    border-radius: 10px;
+}
+
+
+/*FOOTER*/
+footer {
+    margin-top: 200px;
+    height: 200px;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+.footer-text{
+    flex: 1;
+    font-size: 14px;
+    text-align: right;  
+    padding-top: 90px
+}
+
