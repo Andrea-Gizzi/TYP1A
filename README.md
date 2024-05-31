@@ -4,7 +4,7 @@ Docenti: A. Gysin, G. Profeta
 
 Elaborato 1: XS
 
-# F0NTZ
+# TYP1A
 Autore: Gizzi Andrea  
 [MediaPipe demo-ES6](https://andrea-gizzi.github.io/F0NTZ/)
 
