@@ -24,7 +24,7 @@ header {
     align-items: center;
     justify-content: space-between;
     font-size: 1em;
-    background-color: rgba(20, 20, 20, 0.6);
+    background-color: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     z-index: 1000;
