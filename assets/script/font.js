@@ -26,7 +26,7 @@ async function run() {
     let data;
 
     await fetch("./assets/data/100_font.json")
-        .then(function(r) { return r.json() })
+        .then(function(r) { return r.json(); })
         .then(json => {
             data = json;
         });
@@ -112,7 +112,7 @@ async function run() {
         }
     });
 
-    render_letter(lettera);
+    render_letter(lettera, uppercase);
 
     function getLetter() {
         let input_value = document.getElementById("input_utente").value.trim();
@@ -191,7 +191,7 @@ async function run() {
     }
 }
 
-//CATEGORIA STANDARD PAGINA
+// CATEGORIA STANDARD PAGINA
 window.onload = function() {
     document.getElementById('categoriaButton').classList.add('active');
     changeFilter('categoria');
