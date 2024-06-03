@@ -2,8 +2,8 @@ let categoria = 'categoria';
 let caratteri = "abcdefghijklmnopqrstuvwxyz0123456789";
 let lettera = caratteri.charAt(Math.floor(Math.random() * caratteri.length));
 let uppercase = false;
-let prevLettera = lettera;  // Variabile per memorizzare la lettera precedente
-let prevUppercase = uppercase;  // Variabile per memorizzare lo stato uppercase precedente
+let prevLettera = lettera;
+let prevUppercase = uppercase;
 
 function changeFilter(newFilter) {
     categoria = newFilter;
@@ -86,16 +86,16 @@ async function run() {
     mio_input.addEventListener("keyup", function() {
         let inputValue = mio_input.value.trim();
         if (inputValue === '' || inputValue === 'undefined') {
-            lettera = prevLettera;  // Ripristina la lettera precedente se l'input è vuoto
-            uppercase = prevUppercase;  // Ripristina lo stato uppercase precedente
+            lettera = prevLettera;
+            uppercase = prevUppercase;
         } else if (caratteri.includes(inputValue.toLowerCase())) {
             lettera = inputValue.toLowerCase();
             uppercase = (inputValue === inputValue.toUpperCase());
-            prevLettera = lettera;  // Aggiorna la lettera precedente
-            prevUppercase = uppercase;  // Aggiorna lo stato uppercase precedente
+            prevLettera = lettera;
+            prevUppercase = uppercase;
         } else {
-            lettera = prevLettera;  // Mantiene la lettera precedente per caratteri non validi
-            uppercase = prevUppercase;  // Mantiene lo stato uppercase precedente
+            lettera = prevLettera;
+            uppercase = prevUppercase;
         }
 
         render_letter(lettera, uppercase);
@@ -117,15 +117,15 @@ async function run() {
     function getLetter() {
         let input_value = document.getElementById("input_utente").value.trim();
         if (input_value === '') {
-            lettera = prevLettera;  // Ripristina la lettera precedente se l'input è vuoto
-            uppercase = prevUppercase;  // Ripristina lo stato uppercase precedente
+            lettera = prevLettera;
+            uppercase = prevUppercase;
         } else if (caratteri.includes(input_value.toLowerCase())) {
             lettera = input_value.toLowerCase();
-            prevLettera = lettera;  // Aggiorna la lettera precedente
-            prevUppercase = uppercase;  // Aggiorna lo stato uppercase precedente
+            prevLettera = lettera;
+            prevUppercase = uppercase;
         } else {
-            lettera = prevLettera;  // Mantiene la lettera precedente per caratteri non validi
-            uppercase = prevUppercase;  // Mantiene lo stato uppercase precedente
+            lettera = prevLettera;
+            uppercase = prevUppercase;
         }
         console.log(lettera);
 
@@ -135,7 +135,7 @@ async function run() {
     let up_case = document.getElementById('up');
     up_case.addEventListener("click", function() {
         uppercase = !uppercase;
-        prevUppercase = uppercase;  // Aggiorna lo stato uppercase precedente
+        prevUppercase = uppercase;
 
         if (lettera === '' || lettera === 'undefined') {
             lettera = caratteri.charAt(Math.floor(Math.random() * caratteri.length));
