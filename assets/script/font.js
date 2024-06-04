@@ -5,6 +5,7 @@ let uppercase = false;
 let prevLettera = lettera;
 let prevUppercase = uppercase;
 
+
 function changeFilter(newFilter) {
     categoria = newFilter;
 
@@ -21,6 +22,7 @@ function changeFilter(newFilter) {
 
     document.getElementById(newFilter + 'Button').classList.add('active');
 }
+
 
 async function run() {
     let data;
@@ -58,6 +60,7 @@ async function run() {
         });
     } 
 
+
     // CATEGORIE
     let categorie = [];
     for (let i = 0; i < data.length; i++) {
@@ -80,10 +83,26 @@ async function run() {
     }
 
     document.querySelector('main').innerHTML = cats;
+    let up_case = document.getElementById('up');
+
+    function keyup_and_up(){
+        if (uppercase) {
+            up_case.classList.remove('uppercase-inactive');
+            up_case.classList.add('uppercase-active');
+            up_case.innerHTML = '<i class="bi bi-shift-fill"></i>';
+        } else {
+            up_case.classList.remove('uppercase-active');
+            up_case.classList.add('uppercase-inactive');
+            up_case.innerHTML = '<i class="bi bi-shift"></i>';
+        }
+    }
+
     let mio_input = document.getElementById("input_utente");
     mio_input.addEventListener("input", getLetter);
 
     mio_input.addEventListener("keyup", function() {
+        keyup_and_up();
+        render_letter(lettera, uppercase);
         let inputValue = mio_input.value.trim();
         if (inputValue === '' || inputValue === 'undefined') {
             lettera = prevLettera;
@@ -97,22 +116,17 @@ async function run() {
             lettera = prevLettera;
             uppercase = prevUppercase;
         }
+    });
 
+    up_case.addEventListener("click", function() {
+        keyup_and_up();
+        uppercase = !uppercase;
+        prevUppercase = uppercase;
         render_letter(lettera, uppercase);
-
-        let up_case = document.getElementById('up');
-        if (uppercase) {
-            up_case.classList.remove('uppercase-inactive');
-            up_case.classList.add('uppercase-active');
-            up_case.innerHTML = '<i class="bi bi-shift-fill"></i>';
-        } else {
-            up_case.classList.remove('uppercase-active');
-            up_case.classList.add('uppercase-inactive');
-            up_case.innerHTML = '<i class="bi bi-shift"></i>';
-        }
     });
 
     render_letter(lettera, uppercase);
+
 
     function getLetter() {
         let input_value = document.getElementById("input_utente").value.trim();
@@ -132,26 +146,6 @@ async function run() {
         render_letter(lettera, uppercase);
     }
 
-    let up_case = document.getElementById('up');
-    up_case.addEventListener("click", function() {
-        uppercase = !uppercase;
-        prevUppercase = uppercase;
-
-        if (lettera === '' || lettera === 'undefined') {
-            lettera = caratteri.charAt(Math.floor(Math.random() * caratteri.length));
-        }
-        render_letter(lettera, uppercase);
-
-        if (uppercase) {
-            up_case.classList.remove('uppercase-inactive');
-            up_case.classList.add('uppercase-active');
-            up_case.innerHTML = '<i class="bi bi-shift-fill"></i>';
-        } else {
-            up_case.classList.remove('uppercase-active');
-            up_case.classList.add('uppercase-inactive');
-            up_case.innerHTML = '<i class="bi bi-shift"></i>';
-        }
-    });
 
     function render_letter(lettera, uppercase) {
         let categorie = document.getElementsByClassName('categoria');
@@ -191,7 +185,7 @@ async function run() {
     }
 }
 
-// CATEGORIA STANDARD PAGINA
+// Impostazione degli event listener
 window.onload = function() {
     document.getElementById('categoriaButton').classList.add('active');
     changeFilter('categoria');
