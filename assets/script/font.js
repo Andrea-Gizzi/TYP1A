@@ -144,7 +144,7 @@ async function run() {
 
 
     function getLetter() {
-        console.log('test')
+        //console.log('test')
 
         let input_value = document.getElementById("input_utente").value.trim();
 
@@ -159,7 +159,7 @@ async function run() {
             lettera = prevLettera;
             uppercase = prevUppercase;
         }
-        console.log(lettera,uppercase);
+        //console.log(lettera,uppercase);
 
         render_letter(lettera, uppercase);
     }
@@ -167,7 +167,7 @@ async function run() {
 
     function render_letter(lettera, uppercase) {
         let categorie = document.getElementsByClassName('categoria');
-        console.log(lettera, uppercase);
+        //console.log(lettera, uppercase);
 
         for (let i = 0; i < categorie.length; i++) {
             categorie[i].innerHTML = '';
@@ -199,7 +199,7 @@ async function run() {
             container.innerHTML += output;
         }
 
-        console.log(uppercase);
+        //console.log(uppercase);
     }
 }
 
