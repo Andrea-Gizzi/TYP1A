@@ -10,6 +10,7 @@ body {
     font-family: monospace;
 }
 
+
 /* HEADER */ 
 header {
     position: fixed;
@@ -137,6 +138,7 @@ header {
     background-color: #142fff;
 }
 
+
 /* METADATI */
 .metadata span:first-child { /*nome font*/
     font-weight: bold; 
@@ -173,6 +175,7 @@ header {
     color: gray;
     font-size: 12px; 
 }
+
 
 /*CATEGORIA*/
 h1 {
@@ -245,6 +248,7 @@ main {
     font-size: 12px;
     display: block;
 }
+
 
 /*FOOTER*/
 footer {

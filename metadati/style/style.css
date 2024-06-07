@@ -1,11 +1,10 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(20, 20, 20);
     color: white;
     font-family: monospace;
@@ -30,52 +29,8 @@ header {
     z-index: 1000;
 }
 
-.header-text{
+.header-text {
     font-size: 18px;
-}
-
-#input_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-#input {
-    display: flex;
-    align-items: center;
-}
-
-#input_utente {
-    background-color: transparent;
-    font-size: 14px;
-    color: white;
-    border: 1px solid #5064ff;
-    border-radius: 8px;
-    text-align: center;
-    padding: 8px 10px;
-    margin-left: 10px;
-    text-align: left;
-}
-
-#up {
-    margin-left: 10px;
-    border: 1px solid  #5064ff;
-    background-color: #ffffff00;
-    color: white;
-    border-radius: 8px;
-    text-align: center;
-    padding: 6px 8px;
-    font-size: 18px;
-    display: inline-block;    
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-#up.uppercase-active {
-    background-color:  #5064ff;
-    color: white;
 }
 
 #buttons {
@@ -109,8 +64,8 @@ header {
     background-color: white;
 }
 
-#buttons .b2{
-        font-family: Helvetica, sans-serif;
+#buttons .b2 {
+    font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: none;
     background-color: #5064ff;
@@ -166,8 +121,6 @@ header {
 }
 
 
-
-
 /*MAIN*/
 main {
     margin-top: 200px;
@@ -217,10 +170,9 @@ footer {
     border-top: 1px solid white;
 }
 
-.footer-text{
+.footer-text {
     flex: 1;
     font-size: 14px;
     text-align: right;  
-    padding-top: 90px
+    padding-top: 90px;
 }
-
