@@ -61,6 +61,9 @@ async function run() {
     } 
 
 
+
+
+
     // CATEGORIE
     let categorie = [];
     for (let i = 0; i < data.length; i++) {
@@ -85,6 +88,9 @@ async function run() {
     document.querySelector('main').innerHTML = cats;
     let up_case = document.getElementById('up');
 
+
+
+
     function keyup_and_up(){
         if (uppercase) {
             up_case.classList.remove('uppercase-inactive');
@@ -98,6 +104,8 @@ async function run() {
     }
 
     let mio_input = document.getElementById("input_utente");
+    
+    // input utente
     mio_input.addEventListener("input", getLetter);
 
     mio_input.addEventListener("keyup", function() {
@@ -117,19 +125,29 @@ async function run() {
             uppercase = prevUppercase;
         }
     });
+    
+    //bottone UP
+    //up_case.addEventListener("click", getLetter);
+    // up_case.addEventListener("click", function() {
+    //     console.log('test')
+    //     uppercase = !uppercase;
+    //     prevUppercase = uppercase;
+    //     keyup_and_up();
+    //     getLetter()
+    //     // render_letter(lettera, uppercase);
+    // });
 
-    up_case.addEventListener("click", function() {
-        keyup_and_up();
-        uppercase = !uppercase;
-        prevUppercase = uppercase;
-        render_letter(lettera, uppercase);
-    });
+
+
 
     render_letter(lettera, uppercase);
 
 
     function getLetter() {
+        console.log('test')
+
         let input_value = document.getElementById("input_utente").value.trim();
+
         if (input_value === '') {
             lettera = prevLettera;
             uppercase = prevUppercase;
@@ -141,7 +159,7 @@ async function run() {
             lettera = prevLettera;
             uppercase = prevUppercase;
         }
-        console.log(lettera);
+        console.log(lettera,uppercase);
 
         render_letter(lettera, uppercase);
     }
