@@ -88,9 +88,6 @@ async function run() {
     document.querySelector('main').innerHTML = cats;
     let up_case = document.getElementById('up');
 
-
-
-
     function keyup_and_up(){
         if (uppercase) {
             up_case.classList.remove('uppercase-inactive');
@@ -104,6 +101,7 @@ async function run() {
     }
 
     let mio_input = document.getElementById("input_utente");
+    
     
     // input utente
     mio_input.addEventListener("input", getLetter);
