@@ -11,6 +11,7 @@ body {
 }
 
 
+
 /* HEADER */
 header {
     position: fixed;
@@ -29,8 +30,25 @@ header {
     z-index: 1000;
 }
 
-.header-text {
-    font-size: 18px;
+.indexButton{
+    grid-column: 1 / span 2;
+    font-family: Helvetica, sans-serif;
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;    
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.indexButton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #buttons {
@@ -85,6 +103,7 @@ header {
 }
 
 
+
 /* METADATI */
 .font {
     font-weight: bold; 
@@ -119,6 +138,7 @@ header {
     color: gray;
     font-size: 12px;
 }
+
 
 
 /*MAIN*/
@@ -159,20 +179,30 @@ main div {
 }
 
 
+
 /*FOOTER*/
 footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     margin-top: 200px;
-    height: 200px;
+    height: auto;
     background-color: rgb(20, 20, 20);
     text-align: center;
-    padding: 20px;
+    padding: 40px 60px;
     width: 100%;
     border-top: 1px solid white;
 }
 
+.footer-name {
+    grid-column: 1 / span 2;
+    font-size: 18px;
+    text-align: left;  
+}
+
 .footer-text {
+    grid-column: 1 / span 2;
     flex: 1;
     font-size: 14px;
-    text-align: right;  
-    padding-top: 90px;
+    text-align: left;  
+    padding-top: 80px;
 }

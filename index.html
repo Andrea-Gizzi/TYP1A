@@ -1,53 +1,63 @@
 <!-- HOME -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typia</title>
-    <link rel="icon" type="image/x-icon" href="./assets/imgs/0favicon/favicon.ico">
-    <link rel="stylesheet" href="./assets/style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="./assets/script/font.js"></script>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Typia</title>
+        <link rel="icon" type="image/x-icon" href="./assets/imgs/0favicon/favicon.ico">
+        <link rel="stylesheet" href="./assets/style/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="./assets/script/font.js"></script>
 
-</head>
-<body>
-    <header>
+    </head>
 
-        <div class="header-text">
-            TYP1A
-        </div>
 
-        <div id="input_container">
-            <div id="input">
-                <input id="input_utente" type="text" placeholder="Inserisci una lettera" required minlength="1" maxlength="1"> <button id="up"><i class="bi bi-shift-fill"></i></button></div>
+    <body>
+        <header>
+
+            <button class="indexButton" onclick="window.location.href='https://ixd-supsi.github.io/2024/progetti/1_XS/'">indice</button>
+
+            <div id="input_container">
+                <div id="input">
+                    <input id="input_utente" type="text" placeholder="Inserisci una lettera" required minlength="1" maxlength="1"> <button id="up"><i class="bi bi-shift-fill"></i></button></div>
+                </div>
             </div>
-        </div>
 
-        <div id="buttons">
+            <div id="buttons">
 
-            <button class="b1" id="categoriaButton" onclick="changeFilter('categoria')">Categoria</button>
-            <button class="b1" id="luogoButton" onclick="changeFilter('luogo')">Luogo</button>
-            <button class="b1" id="periodoButton" onclick="changeFilter('periodo')">Anno</button>
-            <button class="b1" id="allButton" onclick="changeFilter('')">Galleria</button>
-            <button class="b2" id="page" onclick="window.location.href='./metadati/index.html'">METADATI</button>
+                <button class="b1" id="categoriaButton" onclick="changeFilter('categoria')">Categoria</button>
+                <button class="b1" id="luogoButton" onclick="changeFilter('luogo')">Luogo</button>
+                <button class="b1" id="periodoButton" onclick="changeFilter('periodo')">Anno</button>
+                <button class="b1" id="allButton" onclick="changeFilter('')">Galleria</button>
+                <button class="b2" id="page" onclick="window.location.href='./metadati/index.html'">METADATI</button>
 
-        </div>
-    </header>
+            </div>
 
-    <main id="main"></main>
+        </header>
 
-    <script></script>
 
-    <footer>
-        <div class="footer-text">
-            Andrea Gizzi<br>
-            <br>
-            CV428.01<br>
-            Interaction design SP23/24
-        </div>
-    </footer>
+        <main id="main"></main>
+        <script></script>
 
-</body>
+
+        <footer>
+
+            <div class="footer-name">
+                TYP1A
+            </div>
+
+            <div class="footer-text">
+                Andrea Gizzi<br>
+                <br>
+                CV428.01<br>
+                Interaction design SP23/24
+            </div>
+
+        </footer>
+
+    </body>
+
 </html>
