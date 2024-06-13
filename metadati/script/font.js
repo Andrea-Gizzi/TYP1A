@@ -5,6 +5,11 @@ let categoria = 'categoria';
 // Cambio filtro
 function changeFilter(newFilter) {
     categoria = newFilter;
+
+    if (newFilter == '') {
+        newFilter = 'all';
+    }
+
     run();
 
     document.querySelectorAll('#buttons button').forEach(button => {
