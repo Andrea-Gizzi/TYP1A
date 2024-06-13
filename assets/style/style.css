@@ -391,7 +391,6 @@ footer {
     }
     
     .metadata span:first-child { /*nome font*/
-        font-weight: bold; 
         font-size: 10px; 
         margin-bottom: 6px;
     }
@@ -401,10 +400,8 @@ footer {
     }
     
     .metadata span:nth-child(3) { /*sottocategoria font*/ 
-        font-style: italic;
         font-size: 8px; 
         margin-bottom: 6px;
-        border-bottom: 1px solid rgb(50, 50, 50);
     }
     
     .metadata span:nth-child(4) { /*autore*/ 
