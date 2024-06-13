@@ -38,31 +38,55 @@ Questo design mira a garantire un'esperienza utente chiara e efficiente, facilit
 
 
 ## Tecnologia usata
-L'intero sito è strutturato sulla rappresentazione dei metadati in varie categorie permettendo all'utente di decidere quale categoria vuole vedere tramite i bottoni che fungono da filtro. La struttura delle categorie nella home è stata scelta per facilitare il confronto tra i font permettendo all'utente maggiore comprensione delle minime differenze, permettendo cosi la funzione corretta dei filtri.
+La particolarità caratterizzante di questa piattaforma è la gestione dell'input untente, costruito con Javascript è fondamentale per consentire agli utenti di selezionare dinamicamente una lettera da visualizzare e di esplorare i metadati associati ai font corrispondenti. Questo sistema permette agli utenti di interagire dinamicamente con l'archivio dei font, selezionando una lettera tramite un campo di input. Ogni volta che l'utente modifica il contenuto dell'input, il sistema aggiorna la visualizzazione per mostrare il font corrispondente alla lettera selezionata e i suoi metadati associati. Questo approccio garantisce un'esperienza utente fluida e intuitiva, migliorando l'usabilità complessiva dell'applicazione.
+Qui di seguito un esempio di come ho gestito l'input:
 
 
 ```JavaScript
-const image = new Image();
-image.onload = () => {
-	gl.bindTexture(gl.TEXTURE_2D, texture);
-	gl.texImage2D(
-		gl.TEXTURE_2D,
-		level,
-		internalFormat,
-		srcFormat,
-		srcType,
-		image
-	);
-	if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-		gl.generateMipmap(gl.TEXTURE_2D);
-	} else {
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-	}
-};
-image.src = url;
-```
+//-------------------------------------------------------------------------
+//Codice di gestione dell'input utente
+    mio_input.addEventListener("input", getLetter);
+
+    mio_input.addEventListener("keyup", function() {
+        keyup_and_up();
+        render_letter(lettera, uppercase);
+        let inputValue = mio_input.value.trim();
+        if (inputValue === '' || inputValue === 'undefined') {
+            lettera = prevLettera;
+            uppercase = prevUppercase;
+        } else if (caratteri.includes(inputValue.toLowerCase())) {
+            lettera = inputValue.toLowerCase();
+            uppercase = (inputValue === inputValue.toUpperCase());
+            prevLettera = lettera;
+            prevUppercase = uppercase;
+        } else {
+            lettera = prevLettera;
+            uppercase = prevUppercase;
+        }
+    });
+
+
+    render_letter(lettera, uppercase);
+
+    function getLetter() {
+        let input_value = document.getElementById("input_utente").value.trim();
+
+        if (input_value === '') {
+            lettera = prevLettera;
+            uppercase = prevUppercase;
+        } else if (caratteri.includes(input_value.toLowerCase())) {
+            lettera = input_value.toLowerCase();
+            prevLettera = lettera;
+            prevUppercase = uppercase;
+        } else {
+            lettera = prevLettera;
+            uppercase = prevUppercase;
+        }
+
+        render_letter(lettera, uppercase);
+    }
+
+```  
 
 ## Target e contesto d’uso
 L'artefatto digitale è concepito per un pubblico giovane e dinamico, principalmente attivo nel campo della grafica. Si rivolge a coloro che devono selezionare un carattere tipografico adatto a specifici contesti di utilizzo, o che sono interessati a informarsi ed esplorare il vasto archivio dei metadati di ogni font. Il contesto d'utilizzo dell'archivio è diversificato e variegato. Una versione più prestante e espansa può essere sfruttata a fini educativi e accademici, per uso personale o in ambito professionale, come ad esempio in studi di design grafico o per progetti indipendenti.
