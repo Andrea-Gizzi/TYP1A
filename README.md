@@ -22,11 +22,19 @@ Nel progetto, non sono stati utilizzati riferimenti progettuali precisi, l'inter
 
 
 ## Design dell’interfraccia e modalià di interazione
-L'intero archivio digitale è stato realizzato in modo tale da avere una buona ergonomia atraverso semplicità, leggibilità e coerenza. Ogni pagina del sito web presenta una struttura uniforme: un header nella parte superiore, composto dal logo e da bottoni intuitivi per la navigazione e la selezione dei filtri, un footer nella parte inferiore e i contenuti al centro della pagina. Per mantenere la semplicità non è stato uso del colore, infatti lo sfondo è sempre color antracite contraposto dal bianco dei comandi e delle immagini e dettagli neri tra cui il font presente nell'immagine.
+L'intero archivio digitale è stato realizzato in modo tale da avere una buona ergonomia atraverso semplicità, leggibilità e coerenza. 
+L'interfaccia presenta una struttura uniforme in tutte le sue pagine:
+- Header, situato nella parte superiore, include bottoni intuitivi per: la navigazione, la selezione dei filtri e per il ritorno alla pagina principale del corso, ed infine nella pagina principale un input per specificare la lettera da visualizzare.
+- Contenuti: centralizzati al centro della pagina, rendendo facile l'accesso e la comprensione dei materiali informativi.
+- Footer: collocato nella parte inferiore, contiene informazioni sul corso e il nome dell'archivio.
 
-L'intera interfaccia è composta da varie modalità di interazione tra cui: differenti bottoni che fungono da filtri o da navigazione tra le varie pagine. Inoltre, è possibile visualizzare i metadati di ciascun font tramite un semplice overlay sull'immagine, che mostra i vari dati su fondo nero sostituendo l'immagine. L'unica pagina all'interno del sito che presenta una struttura differente è quella dedicata alla visione dei metadati. È stata progettata per coloro che preferiscono accedere alle informazioni in modo diretto, senza navigare attraverso le immagini.
+L'interfaccia offre diverse modalità di interazione: 
+- Utilizzo di bottoni per navigare tra le pagine e per filtrare i contenuti.
+- Input per selezionare la lettera da visualizzare nel rendering.
+- Visualizzazione dei metadati attraverso un overlay sull'immagine, che temporaneamente sostituisce l'immagine con i dettagli pertinenti su uno sfondo nero.
 
-[<img src="doc/cards.gif" width="500" alt="Magic trick">]()
+Inoltre è presente una pagina dedicata ai metadati, progettata per fornire un accesso diretto e immediato alle informazioni, senza la necessità di navigare tra le immagini.
+Questo design mira a garantire un'esperienza utente chiara e efficiente, facilitando sia l'esplorazione dettagliata che l'accesso rapido alle informazioni essenziali.
 
 
 ## Tecnologia usata
@@ -57,6 +65,6 @@ image.src = url;
 ```
 
 ## Target e contesto d’uso
-L'artefatto digitale è concepito per un pubblico giovane e dinamico, principalmente attivo nel campo della grafica. Si rivolge a coloro che devono selezionare un carattere tipografico adatto a specifici contesti di utilizzo, o che sono interessati a informarsi ed esplorare il vasto archivio dei metadati di ogni font. Il contesto d'utilizzo dell'archivio è diversificato e variegato. Può essere sfruttato a fini educativi e accademici, per uso personale o in ambito professionale, come ad esempio in studi di design grafico o per progetti indipendenti.
+L'artefatto digitale è concepito per un pubblico giovane e dinamico, principalmente attivo nel campo della grafica. Si rivolge a coloro che devono selezionare un carattere tipografico adatto a specifici contesti di utilizzo, o che sono interessati a informarsi ed esplorare il vasto archivio dei metadati di ogni font. Il contesto d'utilizzo dell'archivio è diversificato e variegato. Una versione più prestante e espansa può essere sfruttata a fini educativi e accademici, per uso personale o in ambito professionale, come ad esempio in studi di design grafico o per progetti indipendenti.
 
 [<img src="doc/munari.jpg" width="300" alt="Supplemento al dizionario italiano">]()
