@@ -91,4 +91,4 @@ Qui di seguito un esempio di come ho gestito l'input:
 ## Target e contesto d’uso
 L'artefatto digitale è concepito per un pubblico giovane e dinamico, principalmente attivo nel campo della grafica. Si rivolge a coloro che devono selezionare un carattere tipografico adatto a specifici contesti di utilizzo, o che sono interessati a informarsi ed esplorare il vasto archivio dei metadati di ogni font. Il contesto d'utilizzo dell'archivio è diversificato e variegato. Una versione più prestante e espansa può essere sfruttata a fini educativi e accademici, per uso personale o in ambito professionale, come ad esempio in studi di design grafico o per progetti indipendenti.
 
-[<img src="img_README/materioteca.jpg" width="300">]()
+[<img src="img_README/materioteca.jpg" width="900">]()
