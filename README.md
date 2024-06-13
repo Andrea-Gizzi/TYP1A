@@ -8,7 +8,6 @@ Elaborato 1: XS
 Autore: Gizzi Andrea  
 [Typia](https://andrea-gizzi.github.io/TYP1A/)
 
-SCIVERLO SENZA SPIEGARE CHE HO FATT UNA RICERCA ECC. DEVO ESSERE PIU OGGETTIVO SUL PROTOTIPO
 ## Introduzione e tema
 La consegna consisteva nella realizzazione di un sistema di interfaccia web interattiva che consentisse di esplorare 100 elementi legati da un tema comune, scelti e autoprodotti. 
 
@@ -17,7 +16,7 @@ Nel mio caso è stato realizzato un archivio interattivo contenente i 100 font p
 
 ## Riferimenti progettuali
 Nel progetto, non sono stati utilizzati riferimenti progettuali precisi, l'interfaccia è stata costruita in base alle esigenzze del progetto al fine di avere un'approccio visivo che valorizzasse ogni singolo contenuto in base alla ricerca in corso, rendendolo funzionale e facilmente leggibile. L'unico riferimento sfruttato è stato quello dell'archivio digitale di daFont, interfaccia che permette di visualizzare in amplia scala molteplici font suddivisi in molteplici categorie.
-IMMAGINE DA FONT
+[<img src="documentazione/daFont_home.jpg" width="300" alt="Supplemento al dizionario italiano">]()
 
 
 
