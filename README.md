@@ -21,7 +21,7 @@ Nel progetto, non sono stati utilizzati riferimenti progettuali precisi, l'inter
 
 
 
-## Design dell’interfraccia e modalià di interazione
+## Design dell’interfaccia e modalià di interazione
 L'intero archivio digitale è stato realizzato in modo tale da avere una buona ergonomia atraverso semplicità, leggibilità e coerenza. 
 L'interfaccia presenta una struttura uniforme in tutte le sue pagine:
 - Header, situato nella parte superiore, include bottoni intuitivi per: la navigazione, la selezione dei filtri e per il ritorno alla pagina principale del corso, ed infine nella pagina principale un input per specificare la lettera da visualizzare.
