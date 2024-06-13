@@ -11,7 +11,6 @@ body {
 }
 
 
-
 /* HEADER */ 
 header {
     position: fixed;
@@ -157,7 +156,6 @@ header {
 }
 
 
-
 /* METADATI */
 .metadata span:first-child { /*nome font*/
     font-weight: bold; 
@@ -268,7 +266,6 @@ main {
 }
 
 
-
 /*FOOTER*/
 footer {
     display: grid;
@@ -294,4 +291,10 @@ footer {
     font-size: 14px;
     text-align: left;  
     padding-top: 80px;
+}
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1024px){
+
 }

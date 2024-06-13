@@ -1,30 +1,32 @@
+// Variabili globali
 let categoria = 'categoria';
 
+
+// Cambio filtro
 function changeFilter(newFilter) {
     categoria = newFilter;
     run();
 
-    //classe disattiva
     document.querySelectorAll('#buttons button').forEach(button => {
         button.classList.remove('active');
     });
 
-    //classe attiva
     document.getElementById(newFilter + 'Button').classList.add('active');
 }
 
 
+// Funzione principale
 async function run() {
     let data;
 
+    // Caricamento dati JSON
     await fetch("../assets/data/100_font.json")
         .then(response => response.json())
         .then(json => {
             data = json;
         });
             
-
-    //FILTRI
+    // Ordinamento dei dati
     if (categoria === 'categoria') {
         data.sort(function(elementoA, elementoB) {
             if (elementoA.categoria < elementoB.categoria) return -1;
@@ -54,7 +56,7 @@ async function run() {
     } 
         
 
-    //METADATI
+    // Render metadati
     let output = "";
     for (let i = 0; i < data.length; i++) {
 
@@ -74,7 +76,7 @@ async function run() {
         document.querySelector('main').innerHTML = output;
     }
 
-//CATEGORIA STANDARD
+// Caricamento della finestra
 window.onload = function() {
     document.getElementById('categoriaButton').classList.add('active');
     changeFilter('categoria');

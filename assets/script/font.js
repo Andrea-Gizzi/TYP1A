@@ -1,3 +1,4 @@
+// Variabili globali
 let categoria = 'categoria';
 let caratteri = "abcdefghijklmnopqrstuvwxyz0123456789";
 let lettera = caratteri.charAt(Math.floor(Math.random() * caratteri.length));
@@ -6,6 +7,7 @@ let prevLettera = lettera;
 let prevUppercase = uppercase;
 
 
+// Cambio filtro
 function changeFilter(newFilter) {
     categoria = newFilter;
 
@@ -13,7 +15,6 @@ function changeFilter(newFilter) {
         newFilter = 'all';
     }
 
-    console.log(newFilter);
     run();
 
     document.querySelectorAll('#buttons button').forEach(button => {
@@ -24,9 +25,11 @@ function changeFilter(newFilter) {
 }
 
 
+// Funzione principale
 async function run() {
     let data;
 
+    // Caricamento dati JSON
     await fetch("./assets/data/100_font.json")
         .then(function(r) { return r.json(); })
         .then(json => {
@@ -35,7 +38,7 @@ async function run() {
 
     let mio_container = document.getElementById('test');
 
-    // SORT
+    // Ordinamento dei dati
     if (categoria === 'categoria') {
         data.sort(function(elementoA, elementoB) {
             if (elementoA.sottocategoria < elementoB.sottocategoria) return -1;
@@ -60,11 +63,7 @@ async function run() {
         });
     } 
 
-
-
-
-
-    // CATEGORIE
+    // Creazione categorie
     let categorie = [];
     for (let i = 0; i < data.length; i++) {
         if (!categorie.includes(data[i][categoria])) {
@@ -88,6 +87,7 @@ async function run() {
     document.querySelector('main').innerHTML = cats;
     let up_case = document.getElementById('up');
 
+    // Gestione maiuscolo
     function keyup_and_up(){
         if (uppercase) {
             up_case.classList.remove('uppercase-inactive');
@@ -103,7 +103,7 @@ async function run() {
     let mio_input = document.getElementById("input_utente");
     
     
-    // input utente
+    // Input utente
     mio_input.addEventListener("input", getLetter);
 
     mio_input.addEventListener("keyup", function() {
@@ -123,27 +123,11 @@ async function run() {
             uppercase = prevUppercase;
         }
     });
-    
-    //bottone UP
-    //up_case.addEventListener("click", getLetter);
-    // up_case.addEventListener("click", function() {
-    //     console.log('test')
-    //     uppercase = !uppercase;
-    //     prevUppercase = uppercase;
-    //     keyup_and_up();
-    //     getLetter()
-    //     // render_letter(lettera, uppercase);
-    // });
-
-
-
 
     render_letter(lettera, uppercase);
 
-
+    // Lettera input utente 
     function getLetter() {
-        //console.log('test')
-
         let input_value = document.getElementById("input_utente").value.trim();
 
         if (input_value === '') {
@@ -157,15 +141,13 @@ async function run() {
             lettera = prevLettera;
             uppercase = prevUppercase;
         }
-        //console.log(lettera,uppercase);
 
         render_letter(lettera, uppercase);
     }
 
-
+    // Render lettera e metadati
     function render_letter(lettera, uppercase) {
         let categorie = document.getElementsByClassName('categoria');
-        //console.log(lettera, uppercase);
 
         for (let i = 0; i < categorie.length; i++) {
             categorie[i].innerHTML = '';
@@ -196,12 +178,10 @@ async function run() {
             output += '</div>';
             container.innerHTML += output;
         }
-
-        //console.log(uppercase);
     }
 }
 
-// Impostazione degli event listener
+// Caricamento della finestra
 window.onload = function() {
     document.getElementById('categoriaButton').classList.add('active');
     changeFilter('categoria');
