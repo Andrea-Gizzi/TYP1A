@@ -16,7 +16,9 @@ Nel mio caso è stato realizzato un archivio interattivo contenente i 100 font p
 
 
 ## Riferimenti progettuali
-Nel progetto, non mi sono orientato su un modello specifico come riferimento per l'interfaccia; piuttosto, ho dedicato tempo a riflettere su come inserire i diversi contenuti in modo da migliorare l'usabilità e la comprensione. Il mio obiettivo principale è stato selezionare un approccio visivo che valorizzasse ogni singolo contenuto in base alla ricerca in corso, rendendolo funzionale e facilmente leggibile.
+Nel progetto, non sono stati utilizzati riferimenti progettuali precisi, l'interfaccia è stata costruita in base alle esigenzze del progetto al fine di avere un'approccio visivo che valorizzasse ogni singolo contenuto in base alla ricerca in corso, rendendolo funzionale e facilmente leggibile. L'unico riferimento sfruttato è stato quello dell'archivio digitale di daFont, interfaccia che permette di visualizzare in amplia scala molteplici font suddivisi in molteplici categorie.
+IMMAGINE DA FONT
+
 
 
 ## Design dell’interfraccia e modalià di interazione
