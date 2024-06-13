@@ -221,6 +221,7 @@ main {
 .categoria {
     display: flex;
     max-width: 100%;
+    width: auto;
     flex-wrap: wrap;
     margin-bottom: 3rem;
     overflow-y: auto;
@@ -329,7 +330,7 @@ footer {
     
     .metadata span:first-child { /*nome font*/
         font-weight: bold; 
-        font-size: 8px; 
+        font-size: 10px; 
         margin-bottom: 6px;
     }
     
