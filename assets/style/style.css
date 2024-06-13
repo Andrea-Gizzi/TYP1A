@@ -30,7 +30,6 @@ header {
 }
 
 .indexButton{
-    grid-column: 1 / span 2;
     font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: none;
@@ -221,6 +220,7 @@ main {
 .categoria {
     display: flex;
     max-width: 100%;
+    justify-content: flex-start;
     width: auto;
     flex-wrap: wrap;
     margin-bottom: 3rem;
@@ -296,12 +296,74 @@ footer {
 
 /*RESPONSIVE*/
 @media screen and (max-width: 1024px){
+
+    header {
+        position: fixed;
+        height: auto;
+        width: 100%;
+        padding: 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1em;
+    }
+
+    #buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #buttons .b1 {
+        margin-left: 6px;
+        border-radius: 6px;
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #buttons .b2 {
+        margin-left: 6px;
+        border-radius: 6px;
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .indexButton{
+        margin-left: 6px;
+        border-radius: 6px;
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    #input {
+        font-size: 12px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+    
+    #input_utente {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
     main {
         margin-top: 200px;
         margin-left: 20px;
         margin-right: 20px;
         max-width: 90%;
         z-index: 1;
+    }
+
+    .info {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        line-height: 1.5;
     }
     
     .categoria img {

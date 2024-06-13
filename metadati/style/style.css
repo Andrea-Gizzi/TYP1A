@@ -30,7 +30,6 @@ header {
 }
 
 .indexButton{
-    grid-column: 1 / span 2;
     font-family: Helvetica, sans-serif;
     margin-left: 10px;
     border: none;
