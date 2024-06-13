@@ -10,10 +10,9 @@ Autore: Gizzi Andrea
 
 SCIVERLO SENZA SPIEGARE CHE HO FATT UNA RICERCA ECC. DEVO ESSERE PIU OGGETTIVO SUL PROTOTIPO
 ## Introduzione e tema
-L'obiettivo principale dell'interfaccia è proprio quello di facilitare la scelta di un font e di approfondirne le informazioni. 
-L'utente ha la possibilità di: esplorare i diversi font, dare come input una determinata lettera per vedere le differenze con essa, visualizzare i metadati e selezionare come vengono suddivise le categorie.
+La consegna consisteva nella realizzazione di un sistema di interfaccia web interattiva che consentisse di esplorare 100 elementi legati da un tema comune, scelti e autoprodotti. 
 
-L'obiettivo principale dell'interfaccia è facilitare la scelta del font più adatto e approfondirne le informazioni. L'utente ha la possibilità di esplorare i diversi font, inserire una lettera specifica per confrontare le variazioni tra i font, visualizzare i metadati e selezionare le categorie di interesse.
+Nel mio caso è stato realizzato un archivio interattivo contenente i 100 font più utilizzati al mondo. L'obiettivo principale dell'interfaccia è facilitare la scelta del font più adatto e approfondirne le informazioni. L'utente ha la possibilità di esplorare i diversi font, inserire una lettera specifica per confrontare le variazioni tra i font, visualizzare i metadati e selezionare le categorie di interesse.
 
 
 ## Riferimenti progettuali
