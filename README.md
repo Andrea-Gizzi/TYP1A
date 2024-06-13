@@ -17,7 +17,7 @@ Nel mio caso è stato realizzato un archivio interattivo contenente i 100 font p
 ## Riferimenti progettuali
 Nel progetto, non sono stati utilizzati riferimenti progettuali precisi, l'interfaccia è stata costruita in base alle esigenzze del progetto al fine di avere un'approccio visivo che valorizzasse ogni singolo contenuto in base alla ricerca in corso, rendendolo funzionale e facilmente leggibile. L'unico riferimento sfruttato è stato quello dell'archivio digitale di daFont, interfaccia che permette di visualizzare in amplia scala molteplici font suddivisi in molteplici categorie.
 
-[<img src="documentazione/daFont_home.jpg" width="300">]()    [<img src="documentazione/daFont_SansSerif.jpg" width="300">]()
+[<img src="img_README/daFont_home.jpg" width="300">]()    [<img src="img_README/daFont_SansSerif.jpg" width="300">]()
 
 
 
@@ -91,4 +91,4 @@ Qui di seguito un esempio di come ho gestito l'input:
 ## Target e contesto d’uso
 L'artefatto digitale è concepito per un pubblico giovane e dinamico, principalmente attivo nel campo della grafica. Si rivolge a coloro che devono selezionare un carattere tipografico adatto a specifici contesti di utilizzo, o che sono interessati a informarsi ed esplorare il vasto archivio dei metadati di ogni font. Il contesto d'utilizzo dell'archivio è diversificato e variegato. Una versione più prestante e espansa può essere sfruttata a fini educativi e accademici, per uso personale o in ambito professionale, come ad esempio in studi di design grafico o per progetti indipendenti.
 
-[<img src="doc/munari.jpg" width="300" alt="Supplemento al dizionario italiano">]()
+[<img src="img_README/materioteca.jpg" width="300">]()
