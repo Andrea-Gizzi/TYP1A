@@ -38,7 +38,7 @@ Questo design mira a garantire un'esperienza utente chiara e efficiente, facilit
 
 
 ## Tecnologia usata
-La particolarità caratterizzante di questa piattaforma è la gestione dell'input untente, costruito con Javascript è fondamentale per consentire agli utenti di selezionare dinamicamente una lettera da visualizzare e di esplorare i metadati associati ai font corrispondenti. Questo sistema permette agli utenti di interagire dinamicamente con l'archivio dei font, selezionando una lettera tramite un campo di input. Ogni volta che l'utente modifica il contenuto dell'input, il sistema aggiorna la visualizzazione per mostrare il font corrispondente alla lettera selezionata e i suoi metadati associati. Questo approccio garantisce un'esperienza utente fluida e intuitiva, migliorando l'usabilità complessiva dell'applicazione.
+La particolarità caratterizzante di questa piattaforma è la gestione dell'input utente, costruito con Javascript è fondamentale per consentire agli utenti di selezionare dinamicamente una lettera da visualizzare e di esplorare i metadati associati ai font corrispondenti. Questo sistema permette agli utenti di interagire dinamicamente con l'archivio dei font, selezionando una lettera tramite un campo di input. Ogni volta che l'utente modifica il contenuto dell'input, il sistema aggiorna la visualizzazione per mostrare il font corrispondente alla lettera selezionata e i suoi metadati associati. Questo approccio garantisce un'esperienza utente fluida e intuitiva, migliorando l'usabilità complessiva dell'applicazione.
 Qui di seguito un esempio di come ho gestito l'input:
 
 
